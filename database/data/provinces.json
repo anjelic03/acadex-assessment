@@ -1,0 +1,350 @@
+[
+  {
+    "prov_code": 128,
+    "prov_desc": "ILOCOS NORTE"
+  },
+  {
+    "prov_code": 129,
+    "prov_desc": "ILOCOS SUR"
+  },
+  {
+    "prov_code": 133,
+    "prov_desc": "LA UNION"
+  },
+  {
+    "prov_code": 155,
+    "prov_desc": "PANGASINAN"
+  },
+  {
+    "prov_code": 209,
+    "prov_desc": "BATANES"
+  },
+  {
+    "prov_code": 215,
+    "prov_desc": "CAGAYAN"
+  },
+  {
+    "prov_code": 231,
+    "prov_desc": "ISABELA"
+  },
+  {
+    "prov_code": 250,
+    "prov_desc": "NUEVA VIZCAYA"
+  },
+  {
+    "prov_code": 257,
+    "prov_desc": "QUIRINO"
+  },
+  {
+    "prov_code": 308,
+    "prov_desc": "BATAAN"
+  },
+  {
+    "prov_code": 314,
+    "prov_desc": "BULACAN"
+  },
+  {
+    "prov_code": 349,
+    "prov_desc": "NUEVA ECIJA"
+  },
+  {
+    "prov_code": 354,
+    "prov_desc": "PAMPANGA"
+  },
+  {
+    "prov_code": 369,
+    "prov_desc": "TARLAC"
+  },
+  {
+    "prov_code": 371,
+    "prov_desc": "ZAMBALES"
+  },
+  {
+    "prov_code": 377,
+    "prov_desc": "AURORA"
+  },
+  {
+    "prov_code": 410,
+    "prov_desc": "BATANGAS"
+  },
+  {
+    "prov_code": 421,
+    "prov_desc": "CAVITE"
+  },
+  {
+    "prov_code": 434,
+    "prov_desc": "LAGUNA"
+  },
+  {
+    "prov_code": 456,
+    "prov_desc": "QUEZON"
+  },
+  {
+    "prov_code": 458,
+    "prov_desc": "RIZAL"
+  },
+  {
+    "prov_code": 505,
+    "prov_desc": "ALBAY"
+  },
+  {
+    "prov_code": 516,
+    "prov_desc": "CAMARINES NORTE"
+  },
+  {
+    "prov_code": 517,
+    "prov_desc": "CAMARINES SUR"
+  },
+  {
+    "prov_code": 520,
+    "prov_desc": "CATANDUANES"
+  },
+  {
+    "prov_code": 541,
+    "prov_desc": "MASBATE"
+  },
+  {
+    "prov_code": 562,
+    "prov_desc": "SORSOGON"
+  },
+  {
+    "prov_code": 604,
+    "prov_desc": "AKLAN"
+  },
+  {
+    "prov_code": 606,
+    "prov_desc": "ANTIQUE"
+  },
+  {
+    "prov_code": 619,
+    "prov_desc": "CAPIZ"
+  },
+  {
+    "prov_code": 630,
+    "prov_desc": "ILOILO"
+  },
+  {
+    "prov_code": 645,
+    "prov_desc": "NEGROS OCCIDENTAL"
+  },
+  {
+    "prov_code": 679,
+    "prov_desc": "GUIMARAS"
+  },
+  {
+    "prov_code": 712,
+    "prov_desc": "BOHOL"
+  },
+  {
+    "prov_code": 722,
+    "prov_desc": "CEBU"
+  },
+  {
+    "prov_code": 746,
+    "prov_desc": "NEGROS ORIENTAL"
+  },
+  {
+    "prov_code": 761,
+    "prov_desc": "SIQUIJOR"
+  },
+  {
+    "prov_code": 826,
+    "prov_desc": "EASTERN SAMAR"
+  },
+  {
+    "prov_code": 837,
+    "prov_desc": "LEYTE"
+  },
+  {
+    "prov_code": 848,
+    "prov_desc": "NORTHERN SAMAR"
+  },
+  {
+    "prov_code": 860,
+    "prov_desc": "SAMAR (WESTERN SAMAR)"
+  },
+  {
+    "prov_code": 864,
+    "prov_desc": "SOUTHERN LEYTE"
+  },
+  {
+    "prov_code": 878,
+    "prov_desc": "BILIRAN"
+  },
+  {
+    "prov_code": 972,
+    "prov_desc": "ZAMBOANGA DEL NORTE"
+  },
+  {
+    "prov_code": 973,
+    "prov_desc": "ZAMBOANGA DEL SUR"
+  },
+  {
+    "prov_code": 983,
+    "prov_desc": "ZAMBOANGA SIBUGAY"
+  },
+  {
+    "prov_code": 997,
+    "prov_desc": "CITY OF ISABELA"
+  },
+  {
+    "prov_code": 1013,
+    "prov_desc": "BUKIDNON"
+  },
+  {
+    "prov_code": 1018,
+    "prov_desc": "CAMIGUIN"
+  },
+  {
+    "prov_code": 1035,
+    "prov_desc": "LANAO DEL NORTE"
+  },
+  {
+    "prov_code": 1042,
+    "prov_desc": "MISAMIS OCCIDENTAL"
+  },
+  {
+    "prov_code": 1043,
+    "prov_desc": "MISAMIS ORIENTAL"
+  },
+  {
+    "prov_code": 1123,
+    "prov_desc": "DAVAO DEL NORTE"
+  },
+  {
+    "prov_code": 1124,
+    "prov_desc": "DAVAO DEL SUR"
+  },
+  {
+    "prov_code": 1125,
+    "prov_desc": "DAVAO ORIENTAL"
+  },
+  {
+    "prov_code": 1182,
+    "prov_desc": "COMPOSTELA VALLEY"
+  },
+  {
+    "prov_code": 1186,
+    "prov_desc": "DAVAO OCCIDENTAL"
+  },
+  {
+    "prov_code": 1247,
+    "prov_desc": "COTABATO (NORTH COTABATO)"
+  },
+  {
+    "prov_code": 1263,
+    "prov_desc": "SOUTH COTABATO"
+  },
+  {
+    "prov_code": 1265,
+    "prov_desc": "SULTAN KUDARAT"
+  },
+  {
+    "prov_code": 1280,
+    "prov_desc": "SARANGANI"
+  },
+  {
+    "prov_code": 1298,
+    "prov_desc": "COTABATO CITY"
+  },
+  {
+    "prov_code": 1339,
+    "prov_desc": "NCR, CITY OF MANILA, FIRST DISTRICT"
+  },
+  {
+    "prov_code": 1374,
+    "prov_desc": "NCR, SECOND DISTRICT"
+  },
+  {
+    "prov_code": 1375,
+    "prov_desc": "NCR, THIRD DISTRICT"
+  },
+  {
+    "prov_code": 1376,
+    "prov_desc": "NCR, FOURTH DISTRICT"
+  },
+  {
+    "prov_code": 1401,
+    "prov_desc": "ABRA"
+  },
+  {
+    "prov_code": 1411,
+    "prov_desc": "BENGUET"
+  },
+  {
+    "prov_code": 1427,
+    "prov_desc": "IFUGAO"
+  },
+  {
+    "prov_code": 1432,
+    "prov_desc": "KALINGA"
+  },
+  {
+    "prov_code": 1444,
+    "prov_desc": "MOUNTAIN PROVINCE"
+  },
+  {
+    "prov_code": 1481,
+    "prov_desc": "APAYAO"
+  },
+  {
+    "prov_code": 1507,
+    "prov_desc": "BASILAN"
+  },
+  {
+    "prov_code": 1536,
+    "prov_desc": "LANAO DEL SUR"
+  },
+  {
+    "prov_code": 1538,
+    "prov_desc": "MAGUINDANAO"
+  },
+  {
+    "prov_code": 1566,
+    "prov_desc": "SULU"
+  },
+  {
+    "prov_code": 1570,
+    "prov_desc": "TAWI-TAWI"
+  },
+  {
+    "prov_code": 1602,
+    "prov_desc": "AGUSAN DEL NORTE"
+  },
+  {
+    "prov_code": 1603,
+    "prov_desc": "AGUSAN DEL SUR"
+  },
+  {
+    "prov_code": 1667,
+    "prov_desc": "SURIGAO DEL NORTE"
+  },
+  {
+    "prov_code": 1668,
+    "prov_desc": "SURIGAO DEL SUR"
+  },
+  {
+    "prov_code": 1685,
+    "prov_desc": "DINAGAT ISLANDS"
+  },
+  {
+    "prov_code": 1740,
+    "prov_desc": "MARINDUQUE"
+  },
+  {
+    "prov_code": 1751,
+    "prov_desc": "OCCIDENTAL MINDORO"
+  },
+  {
+    "prov_code": 1752,
+    "prov_desc": "ORIENTAL MINDORO"
+  },
+  {
+    "prov_code": 1753,
+    "prov_desc": "PALAWAN"
+  },
+  {
+    "prov_code": 1759,
+    "prov_desc": "ROMBLON"
+  }
+]

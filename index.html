@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123b67">
+    <title>Dashboard | ACADEX</title>
+    <link rel="icon" type="image/webp" href="images/acadex-logo.webp">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/dropdowns.js" defer></script>
+    <script src="js/programs.js" defer></script>
+    <script src="js/addresses.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/recommendation-snapshot.js" defer></script>
+    <script src="js/recommendations.js" defer></script>
+    <script src="js/assessment.js" defer></script>
+</head>
+<body class="app-body">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell" data-page="dashboard">
+        <header class="app-header">
+            <div class="app-brand">
+                <button class="app-brand__toggle" type="button" data-sidebar-toggle aria-expanded="true" aria-controls="app-drawer" aria-label="Collapse sidebar" title="Collapse sidebar">
+                    <img class="app-brand__logo" src="images/acadex-logo.webp" alt="">
+                    <svg class="app-brand__sidebar-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg>
+                </button>
+                <strong class="app-brand__name app-brand__wordmark">ACADEX</strong>
+            </div>
+
+            <button class="menu-button" type="button" data-drawer-toggle aria-expanded="false" aria-controls="app-drawer">
+                <span class="menu-button__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="sr-only">Open navigation</span>
+            </button>
+
+        </header>
+        <div class="app-frame">
+            <aside id="app-drawer" class="app-sidebar" data-drawer aria-label="ACADEX navigation">
+                <div class="app-sidebar__inner">
+                    <nav class="sidebar-nav" aria-label="Student pages">
+                        <a class="sidebar-nav__item" href="#dashboard" aria-label="Dashboard" title="Dashboard" data-drawer-link>
+                            <span class="sidebar-nav__icon" aria-hidden="true"><img src="images/dashboard.webp" alt=""></span>
+                            <span class="sidebar-nav__label">Dashboard</span>
+                        </a>
+                        <a class="sidebar-nav__item" href="#home" aria-label="Home" title="Home" data-drawer-link>
+                            <span class="sidebar-nav__icon" aria-hidden="true"><img src="images/home.webp" alt=""></span>
+                            <span class="sidebar-nav__label">Home</span>
+                        </a>
+                        <a class="sidebar-nav__item" href="#profile" aria-label="Profile" title="Profile" data-drawer-link>
+                            <span class="sidebar-nav__icon" aria-hidden="true"><img src="images/user.webp" alt=""></span>
+                            <span class="sidebar-nav__label">Profile</span>
+                        </a>
+                    </nav>
+                </div>
+                <footer class="account-panel admin-sidebar__footer" data-account-panel>
+                    <span class="account-panel__eyebrow">Logged in as:</span>
+                    <strong data-student-name></strong>
+                    <button class="signout-btn" type="button" data-sign-out aria-label="Sign out" title="Sign out">
+                        <svg class="signout-btn__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4M14 8l4 4-4 4M8 12h13"/></svg>
+                        <span class="signout-btn__label">Sign out</span>
+                    </button>
+                </footer>
+                <footer class="sidebar-signup" data-guest-panel hidden>
+                    <a class="button button--gold" href="#profile" data-sign-in data-drawer-link>Sign up now</a>
+                </footer>
+            </aside>
+            <button
+                class="sidebar-toggle-edge"
+                type="button"
+                data-sidebar-resize
+                aria-controls="app-drawer"
+                aria-expanded="true"
+                aria-label="Collapse sidebar"
+                aria-keyshortcuts="ArrowLeft ArrowRight Home End"
+                title="Click to toggle or drag to resize the sidebar"
+            ></button>
+            <div class="drawer-scrim" data-drawer-close aria-hidden="true"></div>
+            <main id="main-content" class="app-main" tabindex="-1">
+                <div class="page-wrap dashboard-page" data-view="dashboard">
+                    <header class="page-heading">
+                        <div>
+                            <span class="eyebrow">Your profile</span>
+                            <h1>Good to see you, <span data-student-name>Alex</span>.</h1>
+                            <p>Review your information to keep your course-matching profile current.</p>
+                        </div>
+                    </header>
+
+                    <p class="save-status" data-assessment-status role="status" hidden></p>
+                    <section class="dashboard-hero panel" aria-labelledby="dashboardHeroTitle">
+                        <div class="dashboard-hero__copy">
+                            <span class="card-kicker">Your ACADEX profile</span>
+                            <h2 id="dashboardHeroTitle">Keep your assessment details accurate.</h2>
+                            <p>Your academic background, interests, and goals will be used for future course recommendations.</p>
+                            <button class="button button--gold" type="button" data-assessment-open>Review assessment</button>
+                        </div>
+                        <div class="dashboard-hero__metric">
+                            <span class="metric-ring metric-ring--steps" aria-hidden="true"><b>05</b></span>
+                            <span>guided assessment</span>
+                            <strong data-assessment-metric>Ready to begin</strong>
+                        </div>
+                    </section>
+
+                    <div class="dashboard-stat-grid" role="group" aria-label="Profile and recommendation summary">
+                        <article class="stat-card"><span class="stat-card__label">SUAST percentile</span><strong data-saved-percentile>—</strong><span>aptitude fit</span></article>
+                        <article class="stat-card stat-card--fact"><span class="stat-card__label">What shaped a match</span><p class="stat-card__fact" data-match-factor>Finish your assessment to see a factor behind your top match.</p></article>
+                        <article class="stat-card stat-card--fact"><span class="stat-card__label">A program to explore</span><p class="stat-card__fact" data-program-to-explore>Your recommendations will suggest a program to explore.</p></article>
+                        <article class="stat-card stat-card--fact stat-card--accent"><span class="stat-card__label">Where your choices matched</span><p class="stat-card__fact" data-choice-match>Your top programs will be compared with your saved choices.</p></article>
+                    </div>
+
+                    <section class="recommendations-section" aria-labelledby="recommendationsTitle">
+                        <div class="section-heading-row recommendations-heading">
+                            <h2 id="recommendationsTitle">Top 3 recommended programs</h2>
+                            <a class="button button--quiet recommendations-history-link" href="#history" aria-label="View recommendation history" hidden>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.6 7.4"/><path d="M3 5v6h6M12 7v5l3 2"/></svg>
+                                <span>History</span>
+                            </a>
+                            <p data-recommendations-summary>Finish your assessment to generate your personalized program matches.</p>
+                        </div>
+                        <div data-available-results></div>
+                    </section>
+                </div>
+                <div class="page-wrap home-page" data-view="home" hidden>
+
+                        <div class="home-canvas">
+                            <section class="home-hero" aria-labelledby="homeHeroTitle">
+                                <div class="home-hero-content">
+                                    <h1 id="homeHeroTitle">Shape Your Future With Purpose, Values, and the Right Program</h1>
+                                    <p>Explore the university's guiding direction and discover degree programs aligned with your strengths. Start to understand who we are, what we stand for, and where you can grow.</p>
+                                </div>
+                                    <a class="home-hero-cta" href="#profile" data-sign-in hidden>Get Started</a>
+                            </section>
+
+                            <section class="vmgo-card" aria-labelledby="vmgoTitle">
+                                <header class="vmgo-header"><h2 id="vmgoTitle">DOrSU VMGO</h2><p>The university's Vision, Mission, Core Values, and Graduate Outcomes.</p></header>
+                                <div class="vmgo-grid">
+                                        <article class="vmgo-item"><h3>Vision</h3><p>A university of excellence, innovation, and inclusion.</p></article>
+                                        <article class="vmgo-item"><h3>Mission</h3><ul><li>Elevate knowledge generation, utilization, and distribution.</li><li>Promote inclusive sustainable development through research-based higher quality education and technical-vocational skills.</li><li>Produce holistic, creative, and inclusive human resources who are responsive and resilient to global challenges.</li></ul></article>
+                                        <article class="vmgo-item"><h3>Core Values</h3><ul><li>God-centeredness and humaneness</li><li>Critical Thinking and Creativity</li><li>Discipline and Competence</li><li>Commitment and Collaboration</li><li>Resilience and Sustainability</li></ul></article>
+                                        <article class="vmgo-item"><h3>Graduate Outcomes</h3><ul><li>Research-Oriented and Innovative</li><li>Sense of Professionalism</li><li>ICT-enabled</li><li>Effective Communicator</li><li>Gratitude and Compassion</li></ul></article>
+                                </div>
+                            </section>
+
+                            <section class="programs-card" id="available-programs" aria-labelledby="programsTitle" data-program-browser>
+                                <div class="programs-header"><div><h2 id="programsTitle">Explore programs</h2><p>Find a degree that fits your interests.</p><span class="programs-meta" data-program-count aria-live="polite">0 programs</span></div><div class="admin-table-controls"><label class="sr-only" for="programSearch">Search programs</label><input class="admin-search" id="programSearch" type="search" placeholder="Search programs" data-program-search></div></div>
+                                <div class="programs-mobile-faculty">
+                                    <span id="facultyPickerLabel">Faculty</span>
+                                    <button class="faculty-picker-trigger" type="button" data-faculty-picker-open aria-haspopup="dialog" aria-controls="facultyPicker" aria-expanded="false" aria-labelledby="facultyPickerLabel facultyPickerValue">
+                                        <span id="facultyPickerValue">All Faculties</span>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                                    </button>
+                                </div>
+                                <div class="programs-tabs program-tabs" role="tablist" aria-label="Faculty tabs" data-programs-tabs>
+                                    <button class="tab-pill" type="button" role="tab" aria-selected="false" data-program-filter="all" data-faculty-name="All Faculties" data-faculty-abbr="ALL">All Faculties</button>
+                                </div>
+                                <div class="programs-table">
+                                    <div class="table-title">
+                                        <span id="programsFacultyName">All Faculties</span>
+                                        <span class="faculty-badge" id="programsFacultyAbbr">ALL</span>
+                                    </div>
+                                    <div class="programs-mobile-toolbar">
+                                        <strong>Programs</strong>
+                                        <label class="sr-only" for="programSort">Sort programs</label>
+                                        <select id="programSort" data-program-sort data-options="program_sort"></select>
+                                    </div>
+                                    <table>
+                                        <thead><tr><th scope="col" aria-sort="none"><button class="admin-sort-button" type="button" data-program-sort-column="0">Program Code</button></th><th scope="col" aria-sort="none"><button class="admin-sort-button" type="button" data-program-sort-column="1">Program Name</button></th><th scope="col">Description</th></tr></thead>
+                                        <tbody>
+                                            <tr data-program-empty hidden><td colspan="3">No programs found. Try another search or faculty.</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <dialog class="faculty-picker" id="facultyPicker" aria-labelledby="facultyPickerTitle">
+                                    <div class="faculty-picker__header">
+                                        <h2 id="facultyPickerTitle">Choose a faculty</h2>
+                                        <button type="button" class="faculty-picker__close" data-faculty-picker-close aria-label="Close faculty picker">&times;</button>
+                                    </div>
+                                    <label class="sr-only" for="facultySearch">Search faculties</label>
+                                    <input id="facultySearch" type="search" placeholder="Search faculties" data-faculty-search>
+                                    <div class="faculty-picker__options" role="group" aria-label="Faculties">
+                                        <button class="faculty-picker__option" type="button" data-faculty-option="all" aria-pressed="false">All faculties</button>
+                                        <p class="faculty-picker__empty" data-faculty-empty role="status" hidden>No faculties found. Try another search.</p>
+                                    </div>
+                                </dialog>
+                            </section>
+                        </div>
+
+                    </div>
+                <div class="page-wrap profile-page" data-view="profile" hidden>
+                        <header class="page-heading"><div><h1>Profile</h1><p>Review and edit the personal information held in your ACADEX account.</p></div></header>
+
+                        <form class="profile-layout" data-profile-form>
+                            <p class="save-status" data-profile-status role="status" hidden></p>
+
+                            <section class="profile-card profile-card--personal panel" aria-labelledby="personalInfoTitle">
+                                <div class="profile-card__heading"><h2 id="personalInfoTitle">Personal information</h2><p>The basics that make your profile feel like yours.</p></div>
+                                <div class="form-grid form-grid--two">
+                                    <div class="field-group"><label for="profileFirstName">First name</label><input id="profileFirstName" name="first_name" type="text" required></div>
+                                    <div class="field-group"><label for="profileMiddleName">Middle name</label><input id="profileMiddleName" name="middle_name" type="text" placeholder="Optional"></div>
+                                    <div class="field-group"><label for="profileLastName">Last name</label><input id="profileLastName" name="last_name" type="text" required></div>
+                                    <div class="field-group"><label for="profileSuffix">Suffix</label><select id="profileSuffix" name="suffix" data-options="suffixes"></select></div>
+                                    <div class="field-group"><label for="profileBirthdate">Birthdate</label><input id="profileBirthdate" name="birthdate" type="date" required></div>
+                                    <div class="field-group"><label for="profileGender">Gender</label><select id="profileGender" name="gender" data-options="genders"></select></div>
+                                </div>
+                            </section>
+
+                            <section class="profile-card profile-card--account panel" aria-labelledby="contactInfoTitle">
+                                <div class="profile-card__heading profile-account-heading">
+                                    <div><h2 id="contactInfoTitle">Account information</h2><p>Keep your contact details current.</p></div>
+                                </div>
+                                <div class="form-grid form-grid--two">
+                                    <div class="field-group field-group--full"><label for="profileEmail">Email address</label><input id="profileEmail" name="email" type="email" autocomplete="email" required></div>
+                                </div>
+                            </section>
+
+                            <section class="profile-card profile-card--address panel" aria-labelledby="locationTitle">
+                                <div class="profile-card__heading"><h2 id="locationTitle">Permanent address</h2><p>A little context about where your journey begins.</p></div>
+                                <div class="form-grid" data-address-selects>
+                                    <div class="field-group"><label for="profileProvince">Province</label><select id="profileProvince" name="province" data-address-province><option value="">Province</option></select></div>
+                                    <div class="field-group"><label for="profileCity">City / municipality</label><select id="profileCity" name="city" data-address-city disabled><option value="">City / Municipality</option></select></div>
+                                    <div class="field-group"><label for="profileBarangay">Barangay</label><select id="profileBarangay" name="barangay" data-address-barangay disabled><option value="">Barangay</option></select></div>
+                                </div>
+                            </section>
+
+                            <div class="profile-actions"><button class="button button--navy" type="submit">Save changes</button></div>
+                        </form>
+                    </div>
+                <div class="page-wrap dashboard-page recommendation-history" data-view="history" hidden>
+                    <header class="page-heading"><div><h1>Recommendation history</h1><p>Review and share your saved recommendations.</p></div></header>
+                    <a class="text-link text-link--strong" href="#dashboard">&larr; Back to dashboard</a>
+                    <div class="history-list" data-history-list>
+                        <div class="history-empty panel"><p>No earlier recommendations yet. Complete another assessment to see saved results here.</p></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="assessmentModal" class="assessment-overlay" hidden aria-hidden="true">
+        <div class="assessment-dialog assessment-modal-content" role="dialog" aria-modal="true" aria-labelledby="assessmentTitle">
+            <header class="assessment-dialog__header assessment-header">
+                <div>
+                    <span class="eyebrow">Guided profile review</span>
+                    <h2 class="modal-title" id="assessmentTitle" data-assessment-title>Data Privacy Consent</h2>
+                </div>
+                <button class="icon-button modal-close" type="button" data-assessment-close aria-label="Close assessment">&times;</button>
+            </header>
+
+            <div class="wizard-progress" aria-label="Assessment progress">
+                <button type="button" class="wizard-progress__item" data-wizard-jump="1" data-wizard-label="Consent"><span>01</span>Consent</button>
+                <button type="button" class="wizard-progress__item" data-wizard-jump="2" data-wizard-label="Demographic"><span>02</span>Demographic</button>
+                <button type="button" class="wizard-progress__item" data-wizard-jump="3" data-wizard-label="Academic"><span>03</span>Academic</button>
+                <button type="button" class="wizard-progress__item" data-wizard-jump="4" data-wizard-label="Personality"><span>04</span>Personality</button>
+                <button type="button" class="wizard-progress__item" data-wizard-jump="5" data-wizard-label="Socioeconomic"><span>05</span>Socioeconomic</button>
+            </div>
+
+            <form class="assessment-form" data-assessment-form novalidate>
+                <section class="wizard-step is-active" data-wizard-step="1">
+                    <div class="privacy-box">
+                        <div class="privacy-consent-brand"><img src="images/acadex-logo.webp" alt="ACADEX"><div class="privacy-consent-title">ACADEX</div></div>
+                        <h4>Data Privacy Consent</h4>
+                        <p>Welcome to ACADEX. Before accessing ACADEX, please review and consent to the following data privacy terms:</p>
+                        <p>This simulation uses a demo profile and saves your entries in this browser.</p>
+                        <h5>Purpose of Data Collection</h5>
+                        <p>By creating your course recommendation, you acknowledge that ACADEX collects and processes your personal information to:</p>
+                        <ul><li>Manage your academic records.</li><li>Provide essential student services.</li><li>Communicate important updates and announcements.</li></ul>
+                        <h5>Data Privacy Commitment</h5>
+                        <p>ACADEX is committed to safeguarding your personal data in compliance with the Data Privacy Act of 2012 (Republic Act No. 10173). This law protects individual personal information in information and communications systems in the government and the private sector, ensuring that personal data is secured and protected.</p>
+                        <p>Under the Data Privacy Act, you have the right to:</p>
+                        <ul><li>Access your personal data.</li><li>Correct inaccuracies in your information.</li><li>Withdraw consent at any time, subject to legal limitations.</li></ul>
+                        <p>By clicking &quot;Next&quot;, you consent to the collection and processing of your personal data as described above. If you do not agree, please exit ACADEX.</p>
+                    </div>
+                    <div class="check-row check-row--large"><input id="privacyConsent" name="data_privacy_consent" type="checkbox" value="1" data-privacy-consent required><label for="privacyConsent">I understand and agree to continue.</label></div>
+                    
+                </section>
+
+                <section class="wizard-step" data-wizard-step="2" hidden>
+                    <div class="assessment-grid two-cols assessment-profile-fields">
+                        <div class="field-group"><label for="assessmentFirstName">First Name</label><input id="assessmentFirstName" type="text" disabled></div>
+                        <div class="field-group"><label for="assessmentMiddleName">Middle Name</label><input id="assessmentMiddleName" type="text" disabled></div>
+                        <div class="field-group"><label for="assessmentLastName">Last Name</label><input id="assessmentLastName" type="text" disabled></div>
+                        <div class="field-group"><label for="assessmentSuffix">Suffix</label><input id="assessmentSuffix" type="text" disabled></div>
+                        <div class="field-group"><label for="assessmentBirthdate">Date of Birth</label><input id="assessmentBirthdate" type="date" disabled></div>
+                        <div class="field-group"><label for="assessmentGender">Gender</label><input id="assessmentGender" type="text" disabled></div>
+                    </div>
+                    <div class="assessment-grid two-cols">
+                        <div class="field-group"><label for="assessmentCivilStatus">Civil Status</label><select id="assessmentCivilStatus" name="civil_status" data-options="civil_statuses"><option value="">Select status</option></select></div>
+                        <div class="field-group"><label for="assessmentCitizenship">Citizenship</label><select id="assessmentCitizenship" name="citizenship" data-options="citizenships"><option value="">Select citizenship</option></select></div>
+                        <div class="field-group"><label for="assessmentHeight">Height (ft)</label><input id="assessmentHeight" name="height" type="number" min="0" max="99.99" step="0.01"></div>
+                        <div class="field-group"><label for="assessmentWeight">Weight (kg)</label><input id="assessmentWeight" name="weight" type="number" min="0" max="999.99" step="0.01"></div>
+                    </div>
+                    <h3 class="assessment-section-label assessment-section-label--blue">Permanent Address</h3>
+                    <div class="assessment-grid three-cols assessment-address-fields" data-address-selects>
+                        <div class="field-group"><label for="assessmentProvince">Province</label><select id="assessmentProvince" name="province" data-address-province><option value="">Province</option></select></div>
+                        <div class="field-group"><label for="assessmentCity">City / Municipality</label><select id="assessmentCity" name="city" data-address-city disabled><option value="">City / Municipality</option></select></div>
+                        <div class="field-group"><label for="assessmentBarangay">Barangay</label><select id="assessmentBarangay" name="barangay" data-address-barangay disabled><option value="">Barangay</option></select></div>
+                    </div>
+                </section>
+
+                <section class="wizard-step" data-wizard-step="3" hidden>
+                    <h3 class="assessment-section-label">SUAST Result</h3>
+                    <div class="assessment-grid three-cols">
+                        <div class="field-group"><label for="assessmentPercentile">SUAST percentile</label><input id="assessmentPercentile" name="suast_percentile" type="number" min="0" max="100" step="0.01"></div>
+                        <div class="field-group"><label for="assessmentStanine">SUAST stanine</label><input id="assessmentStanine" name="suast_stanine" type="number" min="1" max="9" step="1"></div>
+                        <div class="field-group"><label for="assessmentIndex">SUAST index</label><input id="assessmentIndex" name="suast_result_index" type="number" min="0" max="99999999.99" step="0.01"></div>
+                    </div>
+                    <h3 class="assessment-section-label">Preferred Courses</h3>
+                    <div class="stacked-selects">
+                        <label class="numbered-select" for="preferredCourse1"><span>1.</span><select id="preferredCourse1" name="preferred_courses[]" data-options="programs"><option value="">Select a program</option></select></label>
+                        <label class="numbered-select" for="preferredCourse2"><span>2.</span><select id="preferredCourse2" name="preferred_courses[]" data-options="programs"><option value="">Select a program</option></select></label>
+                        <label class="numbered-select" for="preferredCourse3"><span>3.</span><select id="preferredCourse3" name="preferred_courses[]" data-options="programs"><option value="">Select a program</option></select></label>
+                    </div>
+                    
+                    <h3 class="assessment-section-label">Senior High School</h3>
+                    <div class="assessment-grid two-cols"><div class="field-group"><label for="assessmentStrand">Strand</label><select id="assessmentStrand" name="shs_strand" data-options="strands"><option value="">Select strand</option></select></div><div class="field-group"><label for="assessmentYear">Year Graduated</label><select id="assessmentYear" data-options="graduation_years" name="year_graduated"><option value="">Select year</option></select></div></div>
+                    <h3 class="assessment-section-label">Senior High School Grades</h3>
+                    <p id="shsGradeFormatGuide"><small>Enter your final SHS grade from 0.00 to 100.00 (example: 85.50).</small></p>
+                    <div class="assessment-grid three-cols"><div class="field-group"><label for="assessmentEnglishGrade">English</label><input id="assessmentEnglishGrade" name="shs_grade_english" type="number" min="0" max="100" step="0.01" placeholder="e.g., 85.50" aria-describedby="shsGradeFormatGuide"></div><div class="field-group"><label for="assessmentMathGrade">Mathematics</label><input id="assessmentMathGrade" name="shs_grade_math" type="number" min="0" max="100" step="0.01" placeholder="e.g., 85.50" aria-describedby="shsGradeFormatGuide"></div><div class="field-group"><label for="assessmentScienceGrade">Science</label><input id="assessmentScienceGrade" name="shs_grade_science" type="number" min="0" max="100" step="0.01" placeholder="e.g., 85.50" aria-describedby="shsGradeFormatGuide"></div></div>
+                    <div class="field-group"><label for="enrollDecisions">Why did you decide to enroll in DOrSU?</label><select id="enrollDecisions" name="enroll_decisions[]" class="legacy-multi-select" multiple data-options="enroll_decisions"></select></div>
+                    <div class="field-group"><label for="ambitions">What is your plan or ambition in life?</label><select id="ambitions" name="ambitions[]" class="legacy-multi-select" multiple data-options="ambitions"></select></div>
+                </section>
+
+                <section class="wizard-step" data-wizard-step="4" hidden>
+                    <h3 class="unique-features-heading">Unique Features</h3>
+                    <div class="field-group"><label for="hobbies">Hobbies / Recreational Activities <em>(What do you enjoy doing in your free time?)</em></label><select id="hobbies" name="hobbies[]" class="legacy-multi-select" multiple data-options="hobbies"></select></div>
+                    <div class="field-group"><label for="interests">Interests <em>(What subjects, topics, or activities do you enjoy?)</em></label><select id="interests" name="interests[]" class="legacy-multi-select" multiple data-options="interests"></select></div>
+                    <div class="field-group"><label for="strengths">Strengths / Skills <em>(What are you good at or naturally skilled in?)</em></label><select id="strengths" name="strengths_skills[]" class="legacy-multi-select" multiple data-options="strengths"></select></div>
+                    <fieldset class="choice-fieldset"><legend>What traits or characteristics do you think you possess?</legend><div class="checkbox-grid" data-checkbox-options="traits"></div></fieldset>
+                    <fieldset class="choice-fieldset"><legend>What bothers you most at the moment?</legend><div class="checkbox-grid bothers-grid" data-checkbox-options="bothers"></div></fieldset>
+                </section>
+
+                <section class="wizard-step" data-wizard-step="5" hidden>
+                    <h3 class="assessment-section-label">Parental Education</h3>
+                    <div class="field-group"><label for="fatherEducation">Father's highest education level</label><select id="fatherEducation" name="father_education" data-options="education_levels"><option value="">Select education level</option></select></div>
+                    <div class="field-group"><label for="motherEducation">Mother's highest education level</label><select id="motherEducation" name="mother_education" data-options="education_levels"><option value="">Select education level</option></select></div>
+                    <h3 class="assessment-section-label">Parental Occupation</h3>
+                    <div class="field-group"><label for="fatherOccupation">Father's occupation</label><select id="fatherOccupation" name="father_occupation" data-options="occupations"><option value="">Select occupation</option></select></div>
+                    <div class="field-group"><label for="motherOccupation">Mother's occupation</label><select id="motherOccupation" name="mother_occupation" data-options="occupations"><option value="">Select occupation</option></select></div>
+                    <div class="assessment-grid two-cols"><div class="field-group"><label for="assessmentIncome">Monthly Family Income (estimated)</label><select id="assessmentIncome" name="family_income" data-options="family_incomes"><option value="">Select income range</option></select></div><div class="field-group"><label>Are you a person with disability (PWD)?</label><div class="radio-row"><label><input type="radio" name="is_pwd" value="1" required> Yes</label><label><input type="radio" name="is_pwd" value="0" checked required> No</label></div></div><div class="field-group"><label>Are you a working student?</label><div class="radio-row"><label><input type="radio" name="is_working_student" value="1" required> Yes</label><label><input type="radio" name="is_working_student" value="0" checked required> No</label></div></div><div class="field-group"><label>Are you a single parent?</label><div class="radio-row"><label><input type="radio" name="is_single_parent" value="1" required> Yes</label><label><input type="radio" name="is_single_parent" value="0" checked required> No</label></div></div></div>
+                </section>
+
+                <p class="auth-field-error assessment-form-error" data-assessment-error role="alert" hidden></p>
+                <footer class="assessment-dialog__footer assessment-footer"><button class="button button--quiet prev-btn" type="button" data-wizard-back disabled>Back</button><span class="wizard-counter" data-wizard-counter>Step 01 of 05</span><button class="button button--navy footer-btn" type="button" data-wizard-next data-pending-label="Generating recommendations…">Next</button></footer>
+            </form>
+        </div>
+    </div>
+    <div class="course-detail-overlay" data-course-detail-modal hidden aria-hidden="true">
+        <div class="course-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="courseDetailTitle">
+            <header class="course-detail-dialog__header">
+                <div>
+                    <h2 id="courseDetailTitle" data-course-detail-name>Program details</h2>
+                    <span class="eyebrow" data-course-detail-code></span>
+                </div>
+                <button class="icon-button" type="button" data-course-detail-close aria-label="Close program details">&times;</button>
+            </header>
+            <div class="course-detail-dialog__body">
+                <section class="course-detail-section">
+                    <h3>Full Course Description</h3>
+                    <p data-course-detail-description></p>
+                </section>
+                <div class="course-detail-divider" role="separator"></div>
+                <section class="course-detail-section course-detail-section--recommendation">
+                    <h3>Why was it recommended?</h3>
+                    <p data-course-detail-rationale></p>
+                    <div class="course-detail-tags" aria-label="Recommendation highlights">
+                        <span>Profile match</span>
+                        <span data-course-detail-faculty>Program fit</span>
+                    </div>
+                    <div class="course-detail-kpi-grid" role="group" aria-label="Recommendation details">
+                        <div><span>Profile Match</span><strong data-course-detail-score>0%</strong></div>
+                        <div class="course-detail-kpi--highlighted"><span>Highlighted Factor</span><strong data-course-detail-top-factor>Factor unavailable</strong></div>
+                        <div data-course-supporting-factor-card hidden><span>Supporting Factor</span><strong data-course-detail-supporting-factor></strong></div>
+                        <div><span>Program Type</span><strong data-course-detail-type>Program</strong></div>
+                    </div>
+                    <div class="course-detail-factor-section" data-course-detail-personal-section hidden>
+                        <h4 id="course-detail-personal-factor-title">Factors in this recommendation</h4>
+                        <ol class="course-detail-factor-graph" aria-labelledby="course-detail-personal-factor-title" data-course-detail-personal-factors></ol>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    @props(['runId', 'student'])
+
+    <div class="recommendation-share" data-recommendation-share>
+        <button class="button button--navy recommendation-share__trigger" type="button" data-share-open aria-haspopup="dialog" aria-controls="shareRecommendation" hidden>Share recommendation</button>
+        <dialog class="recommendation-share-dialog" id="shareRecommendation" aria-labelledby="shareTitle">
+            <header class="recommendation-share-dialog__header">
+                <div>
+                    <h2 id="shareTitle">Share to social media</h2>
+                    <p>Preview the recommended programs, match percentages, and factors before sharing.</p>
+                </div>
+                <form method="dialog"><button class="recommendation-share-dialog__close" type="submit" aria-label="Close sharing">&times;</button></form>
+            </header>
+
+            <div class="recommendation-share-preview" data-share-preview>
+                <p data-share-rendering>Preparing dashboard snapshot…</p>
+            </div>
+
+            <label class="recommendation-share-dialog__caption">
+                <span>Caption</span>
+                <textarea readonly rows="4" data-share-caption></textarea>
+            </label>
+            <div class="recommendation-share-dialog__actions">
+                <button class="button button--navy" type="button" data-share-native hidden>Share post</button>
+                <button class="button button--quiet" type="button" data-share-download>Download image</button>
+                <button class="button button--quiet" type="button" data-share-copy>Copy caption</button>
+            </div>
+            <p class="recommendation-share-dialog__status" role="status" data-share-status></p>
+        </dialog>
+    </div>
+</body>
+</html>
